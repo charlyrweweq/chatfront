@@ -6,28 +6,30 @@
     <title>Chat</title>
     <style>
         body { 
-            font-family: Arial, sans-serif; 
-            background-color: #ece5dd; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #e4ebf0; 
             display: flex; 
             justify-content: center; 
             padding: 20px; 
+            margin: 0;
         }
         #chat-container { 
             background: white; 
             width: 100%; 
             max-width: 500px; 
-            border-radius: 10px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
             display: flex; 
             flex-direction: column; 
             overflow: hidden;
         }
         .header {
-            background: #075e54;
+            background: #3390ec; /* Azul Telegram */
             color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 18px;
         }
         #messages { 
             height: 400px; 
@@ -35,42 +37,50 @@
             padding: 20px; 
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            background-color: #e5ddd5;
+            gap: 8px;
+            background-color: #9eb9ce; /* Fondo clásico de chat de Telegram */
         }
         .bubble { 
-            background: #dcf8c6; 
-            padding: 10px 15px; 
-            border-radius: 15px; 
+            background: #ffffff; 
+            padding: 10px 14px; 
+            border-radius: 15px 15px 15px 0px; /* Esquina estilo Telegram */
             align-self: flex-start;
             max-width: 80%;
             word-wrap: break-word;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 2px rgba(16,35,47,0.15);
+            font-size: 15px;
+            color: #000000;
         }
         .input-group { 
             display: flex; 
-            padding: 10px; 
-            background: #f0f0f0; 
+            padding: 12px 15px; 
+            background: #ffffff; 
             gap: 10px;
+            align-items: center;
         }
         input { 
             flex: 1; 
-            padding: 12px; 
+            padding: 12px 20px; 
             border: none; 
-            border-radius: 20px; 
+            border-radius: 25px; 
             outline: none; 
-            font-size: 14px;
+            font-size: 15px;
+            background-color: #f4f4f5; /* Gris claro para el input */
         }
         button { 
-            padding: 10px 20px; 
-            background: #128c7e; 
-            color: white; 
+            padding: 10px 15px; 
+            background: transparent; 
+            color: #3390ec; /* Texto azul en lugar de botón sólido */
             border: none; 
             border-radius: 20px; 
             cursor: pointer; 
             font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
         }
-        button:hover { background: #075e54; }
+        button:hover { 
+            background: #f0f4f8; 
+        }
     </style>
 </head>
 <body>
